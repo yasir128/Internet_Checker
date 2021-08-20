@@ -1,0 +1,12 @@
+import NetInfo from '@react-native-community/netinfo';
+  checkInternet = async () => {
+    const response = await NetInfo.fetch();
+    if (!response.isConnected) {
+      alert('Check your internet connection...!');
+ 
+
+      return;
+    } else {
+        alert('Connected...!');
+    }
+  };
